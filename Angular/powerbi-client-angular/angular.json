@@ -10,10 +10,16 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "project": "./ng-package.json"
           },
+          "scripts": [
+            {
+              "input": "./node_modules/powerbi-client/dist/powerbi.min.js",
+              "bundleName": "powerbi-client"
+            }
+          ],
           "configurations": {
             "production": {
               "tsConfig": "./config/src/tsconfig.lib.prod.json"
@@ -30,14 +36,6 @@
             "main": "./src/test.ts",
             "tsConfig": "./config/test/tsconfig.spec.json",
             "karmaConfig": "./config/test/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "./src/**/*.ts"
-            ]
           }
         }
       }

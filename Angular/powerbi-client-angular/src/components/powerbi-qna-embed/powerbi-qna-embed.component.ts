@@ -21,7 +21,7 @@ export class PowerBIQnaEmbedComponent extends PowerBIEmbedComponent implements O
   @Input() eventHandlers?: Map<string, EventHandler | null>;
 
   // Ref to the HTML div container element
-  @ViewChild('qnaContainer') private containerRef!: ElementRef<HTMLDivElement>;
+  @ViewChild('qnaContainer', {static: false}) private containerRef!: ElementRef<HTMLDivElement>;
 
   // Embedded entity
   // Note: Do not read or assign to this member variable directly, instead use the getter and setter

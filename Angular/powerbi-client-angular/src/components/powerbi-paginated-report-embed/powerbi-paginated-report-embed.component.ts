@@ -18,7 +18,7 @@ export class PowerBIPaginatedReportEmbedComponent extends PowerBIEmbedComponent 
   @Input() embedConfig!: IEmbedConfiguration;
 
   // Ref to the HTML div container element
-  @ViewChild('paginatedReportContainer') private containerRef!: ElementRef<HTMLDivElement>;
+  @ViewChild('paginatedReportContainer', {static: false}) private containerRef!: ElementRef<HTMLDivElement>;
 
   // Embedded entity
   // Note: Do not read or assign to this member variable directly, instead use the getter and setter

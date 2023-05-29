@@ -5,6 +5,8 @@
  * Public API Surface of powerbi-client-angular
  */
 
+import 'powerbi-client';
+
 export * from './components/powerbi-report-embed/powerbi-report-embed.component';
 export * from './components/powerbi-dashboard-embed/powerbi-dashboard-embed.component';
 export * from './components/powerbi-tile-embed/powerbi-tile-embed.component';

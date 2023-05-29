@@ -24,7 +24,7 @@ export class PowerBIReportEmbedComponent extends PowerBIEmbedComponent implement
   @Input() eventHandlers?: Map<string, EventHandler | null>;
 
   // Ref to the HTML div container element
-  @ViewChild('reportContainer') private containerRef!: ElementRef<HTMLDivElement>;
+  @ViewChild('reportContainer', {static: false}) private containerRef!: ElementRef<HTMLDivElement>;
 
   // Embedded entity
   // Note: Do not read or assign to this member variable directly, instead use the getter and setter
